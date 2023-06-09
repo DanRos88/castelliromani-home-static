@@ -1,0 +1,314 @@
+/*
+  1. Use a more-intuitive box-sizing model.
+*/
+*, *::before, *::after {
+    box-sizing: border-box;
+  }
+  /*
+    2. Remove default margin
+  */
+  * {
+    margin: 0;
+  }
+  /*
+    3. Allow percentage-based heights in the application
+  */
+  html, body {
+    height: 100%;
+  }
+  /*
+    Typographic tweaks!
+    4. Add accessible line-height
+    5. Improve text rendering
+  */
+  body {
+    line-height: 1.5;
+    -webkit-font-smoothing: antialiased;
+  }
+  /*
+    6. Improve media defaults
+  */
+  img, picture, video, canvas, svg {
+    display: block;
+    max-width: 100%;
+  }
+  /*
+    7. Remove built-in form typography styles
+  */
+  input, button, textarea, select {
+    font: inherit;
+  }
+  /*
+    8. Avoid text overflows
+  */
+  p, h1, h2, h3, h4, h5, h6 {
+    overflow-wrap: break-word;
+  }
+  /*
+    9. Create a root stacking context
+  */
+  #root, #__next {
+    isolation: isolate;
+  }
+
+
+@font-face {
+    font-family: "GinoraReg";
+    src: url(./assets/fonts/GinoraSansRegular.otf);
+}
+
+:root{
+    /* COLORS */
+
+    --clr-main-accent: 	hsl(23, 94%, 42%);
+    --clr-main-bg: hsl(0, 0%, 89%);
+    --clr-main-font-dark: hsl(0, 0%, 30%);
+    --clr-main-font-light: hsl(0, 0%, 98%);
+    --clr-main-shdw: hsl(0, 0%, 50%);
+
+    /* TYPOGRAPHY */
+
+    --fs-300: .75rem;
+    --fs-400: 1rem;
+    --fs-500: 1.125rem;
+    --fs-600: 1.25rem;
+    --fs-700: 1.5rem;
+    --fs-800: 2rem;
+    --fs-900: 3rem;
+
+    --ff-400:"GinoraReg", Verdana, Geneva, Tahoma, sans-serif;
+
+    /* SPACINGS */
+    --spacing-section-vertical: 3em;
+    --spacing-bar-vertical: .5em;
+    --spacing-news-all: 1.25em .75em;
+    --spacing-news-datetime: .125em .5em;
+}
+
+
+
+    /* GENERAL */
+
+body{
+    color: var(--clr-main-font-dark);
+    font-family: var(--ff-400);
+    font-size: var(--fs-400);
+    background: var(--clr-main-bg);
+}
+
+section{
+    padding-block: var(--spacing-section-vertical);
+}
+
+.section-bar{
+    text-align: center;
+    width: 100%;
+    background: var(--clr-main-accent);
+    padding-block: var(--spacing-bar-vertical);
+}
+
+.section-bar h2{
+    font-size: var(--fs-600);
+    font-weight: 600;
+    color: var(--clr-main-font-light);
+}
+
+
+
+
+        /* HEADER */
+
+
+
+
+
+
+
+
+        /* NAV */
+
+
+nav{
+    background-color: white;
+    background: var(--clr-main-accent);
+    color: var(--clr-main-font-light);
+}
+
+nav .nav-wrapper{
+    flex-direction: row;
+    align-items: center;
+}
+
+nav .nav-wrapper .logo{
+    padding-block: .5em;
+    margin-right: 2em;
+}
+
+nav .nav-wrapper ul{
+    padding: 0;
+    flex-direction: row;
+    justify-content: flex-start;
+    gap: 1.5em;
+    width: 100%;
+}
+
+nav .nav-wrapper ul li{
+    list-style: none;
+    padding: .5em .25em;
+    display: block;
+}
+
+nav .nav-wrapper ul li:last-child{
+    margin-left: auto;
+}
+
+nav .nav-wrapper ul li:hover{
+    cursor: pointer;
+}
+
+nav .nav-wrapper ul li a{
+    font-size: var(--fs-600);
+    color: var(--clr-main-font-light);
+    font-weight: 600;
+    text-decoration: none;
+    padding-inline: .5em;
+}
+
+
+
+
+        /* LATEST NEWS */
+
+
+section#latest-news .latest-news__component-wrapper{
+    padding-block: var(--spacing-section-vertical);
+}
+
+section#latest-news .latest-news__component-wrapper .latest-news__component-grid{
+    display: grid;
+    grid-template-columns: 280px 280px 280px 280px;
+    gap: 13px;
+}
+
+section#latest-news .latest-news__component-wrapper .latest-news__component-grid .latest-news__comune-component{
+    width: 280px;
+    background: var(--clr-main-font-light);
+    margin-bottom: 1.5em;
+    box-shadow: 0px 5px 15px var(--clr-main-shdw);
+    transition: transform 0.25s ease-in-out;
+}
+
+section#latest-news .latest-news__component-wrapper .latest-news__component-grid .latest-news__comune-component:hover{
+    transform: scale(103%);
+}
+
+section#latest-news .latest-news__component-wrapper .latest-news__component-grid .latest-news__comune-component .latest-news__component-header{
+    text-align: center;
+    padding-block: var(--spacing-bar-vertical);
+}
+
+section#latest-news .latest-news__component-wrapper .latest-news__component-grid .latest-news__comune-component .latest-news__component-header a{
+    color: var(--clr-main-accent);
+    text-decoration: none;
+    inset: 0;
+}
+
+section#latest-news .latest-news__component-wrapper .latest-news__component-grid .latest-news__comune-component .latest-news__component-header a:hover{
+    cursor: pointer;
+}
+
+section#latest-news .latest-news__component-wrapper .latest-news__component-grid .latest-news__comune-component .latest-news__component-header a h1{
+    font-size: var(--fs-700);
+    font-weight: 700;
+    margin: 0;
+}
+
+section#latest-news .latest-news__component-wrapper .latest-news__component-grid .latest-news__comune-component .latest-news__news-component{
+    margin: 0;
+}
+
+section#latest-news .latest-news__component-wrapper .latest-news__component-grid .latest-news__comune-component .latest-news__news-component a{
+    color: var(--clr-main-font-dark);
+    text-decoration: none;
+}
+
+section#latest-news .latest-news__component-wrapper .latest-news__component-grid .latest-news__comune-component .latest-news__news-component a:hover{
+    cursor: pointer;
+}
+
+section#latest-news .latest-news__component-wrapper .latest-news__component-grid .latest-news__comune-component .latest-news__news-component .latest-news__news-thumbnail{
+    height: 160px;
+    background: url(./assets/images/placeholder.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: relative;
+}
+
+section#latest-news .latest-news__component-wrapper .latest-news__component-grid .latest-news__comune-component .latest-news__news-component .latest-news__news-datetime{
+    position: absolute;
+    bottom: 5%;
+    right: 0;
+    background-color: var(--clr-main-font-light);
+    padding: var(--spacing-news-datetime);
+}
+
+section#latest-news .latest-news__component-wrapper .latest-news__component-grid .latest-news__comune-component:nth-child(2) .latest-news__news-component .latest-news__news-datetime{
+    bottom: 0;
+}
+
+section#latest-news .latest-news__component-wrapper .latest-news__component-grid .latest-news__comune-component .latest-news__news-component .latest-news__news-title{
+    padding: var(--spacing-news-all);
+}
+
+section#latest-news .latest-news__component-wrapper .latest-news__component-grid .latest-news__comune-component .latest-news__news-component .latest-news__news-title h2{
+    font-size: var(--fs-600);
+    position: relative;
+}
+
+section#latest-news .latest-news__component-wrapper .latest-news__component-grid .latest-news__comune-component .latest-news__news-component h2::after{
+    position: absolute;
+    content: "";
+    width: 0px;
+    height: 5px;
+    left: 0;
+    bottom: -5px;
+    background-color: var(--clr-main-accent);
+    transition: width .4s ease-in-out;
+}
+
+section#latest-news .latest-news__component-wrapper .latest-news__component-grid .latest-news__comune-component .latest-news__news-component a:hover h2::after{
+    position: absolute;
+    content: "";
+    width: 100%;
+}
+
+
+
+
+        /* UTILITY */
+
+
+.flex{
+    display: flex;
+}
+
+.grid{
+    display: grid;
+}
+
+.hidden{
+    width: 0px;
+    margin-right: 0;
+    height: fit-content;
+    overflow: hidden;
+}
+
+.wrapper-column{
+    grid-column-start: 2;
+}
+
+.grid-3-template{
+    display: grid;
+    grid-template-columns: 1fr minmax(800px, 1160px) 1fr;
+}
