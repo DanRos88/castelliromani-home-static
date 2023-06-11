@@ -125,13 +125,13 @@ header .logo-text{
 }
 
 header picture{
-    padding-block: var(--spacing-section-vertical);
+    padding-block: calc(var(--spacing-section-vertical)*2/3) ;
 }
 
 header picture img{
     margin-inline: auto;
-    max-width: 1160px;
-    height: auto;
+    width: auto;
+    height: 140px;
 }
 
 header picture a:hover img{
