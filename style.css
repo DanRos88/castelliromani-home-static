@@ -208,7 +208,7 @@ section#hottest-news .hottest-news__wrapper .hottest-news__hottest-spotlight{
     grid-area: 1 / 1 / 3 / 3;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: repeat(2,  300fr);
-    gap: var(--spacing-news-grid);
+    gap: 0 var(--spacing-news-grid);
     background-color: var(--clr-main-font-light);
 }
 
@@ -277,12 +277,56 @@ section#hottest-news .hottest-news__wrapper .hottest-news__latest-spotlight .hot
 }
 
 section#hottest-news .hottest-news__wrapper .hottest-news__latest-spotlight .hottest-news__latest-article-wrapper{
-    /* background-color: var(--clr-main-font-light); */
-    justify-self: stretch;
+    /* padding-inline: var(--spacing-news-grid) calc(var(--spacing-news-grid)*1.75); */
+    background-color: var(--clr-main-font-light);
+    /* justify-self: stretch; */
+    position: relative;
+    height: 164px;
+}
+
+section#hottest-news .hottest-news__wrapper .hottest-news__latest-spotlight .hottest-news__latest-article-wrapper a{
+    padding-inline: var(--spacing-news-grid);
+    position: relative;
+    text-decoration: none;
+    color: var(--clr-main-font-dark);
+    max-height: 138px;
+    overflow: hidden;
+}
+
+section#hottest-news .hottest-news__wrapper .hottest-news__latest-spotlight .hottest-news__latest-article-wrapper a:hover{
+    cursor: pointer;
+}
+
+section#hottest-news .hottest-news__wrapper .hottest-news__latest-spotlight .hottest-news__latest-article-wrapper a::after{
+    position: absolute;
+    content: "";
+    width: 5px;
+    height: 0;
+    top: 0;
+    right: 5px;
+    background-color: var(--clr-main-accent);
+    transition: height .4s ease-in-out;
+}
+
+section#hottest-news .hottest-news__wrapper .hottest-news__latest-spotlight .hottest-news__latest-article-wrapper a:hover::after{
+    position: absolute;
+    height: 100%;
+    width: 5px;
+}
+
+section#hottest-news .hottest-news__wrapper .hottest-news__latest-spotlight .hottest-news__latest-article-wrapper a h1.hottest-news__latest-article-title{
+    color: var(--clr-main-font-dark);
+    font-size: var(--fs-600);
+}
+
+section#hottest-news .hottest-news__wrapper .hottest-news__latest-spotlight .hottest-news__latest-article-wrapper a p.hottest-news__latest-article-text{
+    color:  var(--clr-main-font-dark);
+    text-align: justify;
 }
 
 section#hottest-news .hottest-news__wrapper .hottest-news__hot-single-spotlight{
     background-color: var(--clr-main-font-light);
+    padding: var(--spacing-news-grid);
 }
 
 
@@ -437,8 +481,16 @@ footer{
     display: flex;
 }
 
+.flex-between{
+    justify-content: space-between;
+}
+
 .grid{
     display: grid;
+}
+
+.grid-center{
+    place-content: center;
 }
 
 .hidden{
