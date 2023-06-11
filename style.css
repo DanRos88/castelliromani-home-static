@@ -62,7 +62,7 @@
 
     --clr-main-accent: 	hsl(23, 94%, 42%);
     --clr-main-bg: hsl(0, 0%, 89%);
-    --clr-main-font-dark: hsl(0, 0%, 30%);
+    --clr-main-font-dark: hsl(0, 0%, 20%);
     --clr-main-font-light: hsl(0, 0%, 98%);
     --clr-main-shdw: hsl(0, 0%, 50%);
 
@@ -187,7 +187,7 @@ nav .nav-wrapper ul li:hover{
 nav .nav-wrapper ul li a{
     font-size: var(--fs-600);
     color: var(--clr-main-font-light);
-    font-weight: 600;
+    font-weight: bold;
     text-decoration: none;
     padding-inline: .5em;
 }
@@ -326,8 +326,63 @@ section#hottest-news .hottest-news__wrapper .hottest-news__latest-spotlight .hot
 
 section#hottest-news .hottest-news__wrapper .hottest-news__hot-single-spotlight{
     background-color: var(--clr-main-font-light);
-    padding: var(--spacing-news-grid);
 }
+
+section#hottest-news .hottest-news__wrapper .hottest-news__hot-single-spotlight a{
+    text-decoration: none;
+    color: var(--clr-main-font-dark);
+    position: relative;
+}
+
+section#hottest-news .hottest-news__wrapper .hottest-news__hot-single-spotlight a:hover{
+    cursor: pointer;
+}
+
+section#hottest-news .hottest-news__wrapper .hottest-news__hot-single-spotlight a .hottest-news__hot-single-wrapper{
+    grid-template-rows: 1fr 130px;
+    height: 100%;
+}
+
+section#hottest-news .hottest-news__wrapper .hottest-news__hot-single-spotlight a .hottest-news__hot-single-wrapper .hottest-news__hot-single-header{
+    background: url(./assets/images/placeholder.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+section#hottest-news .hottest-news__wrapper .hottest-news__hot-single-spotlight a .hottest-news__hot-single-wrapper .hottest-news__hot-single-title{
+    padding: var(--spacing-news-grid);
+    overflow: hidden;
+}
+
+section#hottest-news .hottest-news__wrapper .hottest-news__hot-single-spotlight a .hottest-news__hot-single-wrapper .hottest-news__hot-single-title h1{
+    font-size: var(--fs-600);
+}
+
+section#hottest-news .hottest-news__wrapper .hottest-news__hot-single-spotlight a .hottest-news__hot-single-wrapper .hottest-news__hot-single-title h1 span{
+    display: block;
+    position: relative;
+}
+
+section#hottest-news .hottest-news__wrapper .hottest-news__hot-single-spotlight a .hottest-news__hot-single-wrapper .hottest-news__hot-single-title h1 span::before{
+    position: absolute;
+    content: "";
+    height: 5px;
+    width: 0;
+    background-color: var(--clr-main-accent);
+    bottom: -10px;
+    left: 0;
+    transition: width .4s ease-in-out;
+}
+
+section#hottest-news .hottest-news__wrapper .hottest-news__hot-single-spotlight a:hover .hottest-news__hot-single-wrapper .hottest-news__hot-single-title h1 span::before{
+    width: 100%;
+}
+
+
+
+
+
 
 
 
@@ -367,7 +422,7 @@ section#latest-news-comuni .latest-news__component-wrapper .latest-news__compone
     width: 0;
     height: 100%;
     top: 0;
-    right: 0;
+    left: 0;
     background-color: var(--clr-main-accent);
     transition: all .2s ease-in-out;
     z-index: -1;
@@ -524,9 +579,9 @@ footer{
 
 
     /* CLIP PATH SU DATETIME*/
-section#latest-news-comuni .latest-news__component-wrapper .latest-news__component-grid .latest-news__comune-component:nth-child(n+9):nth-child(-n+16) .latest-news__news-component .latest-news__news-datetime{
+/* section#latest-news-comuni .latest-news__component-wrapper .latest-news__component-grid .latest-news__comune-component:nth-child(n+9):nth-child(-n+16) .latest-news__news-component .latest-news__news-datetime{
     clip-path: polygon(5% 0%, 100% 0%, 100% 100%, 0% 100%);
-}
+} */
 
     /* AUTOMATIZZAZIONE COLONNE GRID COMUNI */
 section#latest-news-comuni .latest-news__component-wrapper .latest-news__component-grid{
@@ -550,4 +605,8 @@ nav{
 
 footer{
     height: 50vh;
+}
+
+header{
+    background-color: var(--clr-main-font-light);
 }
