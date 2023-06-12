@@ -670,7 +670,7 @@ section#events .events-wrapper .events__day-wrapper .events__day-grid-wrapper .e
 section#events .events-wrapper .events__day-wrapper .events__day-grid-wrapper .events__day-event-wrapper .events__day-event-flexwrapper{
     flex-direction: row;
     flex-wrap: nowrap;
-    gap: var(--spacing-news-grid);
+    /* gap: var(--spacing-news-grid); */
 }
 
 section#events .events-wrapper .events__day-wrapper .events__day-grid-wrapper .events__day-event-wrapper .events__day-event-flexwrapper .events__day-event-header{
