@@ -169,8 +169,25 @@ nav .nav-wrapper{
 }
 
 nav .nav-wrapper .logo{
+    width: 0px;
+    margin-right: 0;
+    height: fit-content;
+    overflow: hidden;
+    color: var(--clr-main-font-light);
+    transition: width .2s ease-in-out;
+}
+
+nav.stick .nav-wrapper .logo{
+    width: 60px;
     padding-block: .5em;
     margin-right: 2em;
+}
+
+nav .nav-wrapper .logo img{
+    height: 36px;
+    width: auto;
+    padding-block: 0;
+    margin-block: 0;
 }
 
 nav .nav-wrapper ul{
@@ -1030,13 +1047,6 @@ footer .footer-site-info h2{
 
 .grid-center{
     place-content: center;
-}
-
-.hidden{
-    width: 0px;
-    margin-right: 0;
-    height: fit-content;
-    overflow: hidden;
 }
 
 .wrapper-column{
