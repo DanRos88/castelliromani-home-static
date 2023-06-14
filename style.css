@@ -204,6 +204,10 @@ nav .nav-wrapper ul li{
     display: block;
 }
 
+nav .nav-wrapper ul li:first-child{
+    padding-left: 0;
+}
+
 /* nav .nav-wrapper ul li:last-child{
     margin-left: auto;
 } */
@@ -218,6 +222,10 @@ nav .nav-wrapper ul li a{
     color: var(--clr-main-font-light);
     text-decoration: none;
     padding-inline: .5em;
+}
+
+nav .nav-wrapper ul li a:first-child{
+    padding-left: 0;
 }
 
 nav .nav-wrapper .searchbox{
