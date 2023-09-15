@@ -1886,10 +1886,19 @@ section.view-more-articles__section-wrapper .view-more-articles__articles-wrappe
     height: 30px;
 }
 
-/* #archive-search .filter-list .filter-list__wrapper form ul li select:focus{
-    background-color: var(--clr-main-accent);
-    color: var(--clr-main-font-light);
-} */
+#archive-search .filter-list .filter-list__wrapper form ul li select{
+    border: none;
+    background-color: var(--clr-main-font-light);
+}
+
+#archive-search .filter-list .filter-list__wrapper form ul li input{
+    border: none;
+    background-color: var(--clr-main-font-light);
+}
+
+#archive-search .filter-list .filter-list__wrapper form ul li input#search-filter{
+    border-bottom: 1px solid var(--clr-main-font-dark);
+}
 
 #archive-search .filter-list .filter-list__wrapper #filter-list__filter-btn{
     display: block;

@@ -628,15 +628,22 @@
                 <div class="filter-list__wrapper">
                     <h1 class="filter-list__search-title">Trovati <span class="filter-list__search-results"> N </span> risultati per <br>"<span class="filter list__search-query">Lorem, ipsum.</span>"</h1>
 
-                    <h2 class="filter-list__filters-title">Filtri addizionali</h2>
+                    <h2 class="filter-list__filters-title">Filtri</h2>
 
                     <form action="">
 
                         <ul>
 
                             <li class="flex">
-                                <label for="filtra-autore">Filtra per Autore</label>
-                                <select name="filtra-autore" id="">
+                                <label for="filtra-search">Parola chiave</label>
+                                <input type="text" name="filtra-search" id="search-filter">
+                                    
+                                </input>
+                            </li>
+
+                            <li class="flex">
+                                <label for="filtra-autore">Autore</label>
+                                <select name="filtra-autore" id="author-filter">
                                     <option value="" selected>Scegli</option>
                                     <option value="lorem">lorem</option>
                                     <option value="lorem">lorem</option>
@@ -647,8 +654,8 @@
                             </li>
 
                             <li class="flex">
-                                <label for="filtra-autore">Filtra per Comune</label>
-                                <select name="filtra-autore" id="">
+                                <label for="filtra-comune">Comune</label>
+                                <select name="filtra-comune" id="comune-filter">
                                     <option value="" selected>Scegli</option>
                                     <option value="lorem">lorem</option>
                                     <option value="lorem">lorem</option>
@@ -659,8 +666,8 @@
                             </li>
 
                             <li class="flex">
-                                <label for="filtra-autore">Filtra per Categoria</label>
-                                <select name="filtra-autore" id="">
+                                <label for="filtra-categoria">Categoria</label>
+                                <select name="filtra-categoria" id="cat-filter">
                                     <option value="" selected>Scegli</option>
                                     <option value="lorem">lorem</option>
                                     <option value="lorem">lorem</option>
@@ -671,8 +678,8 @@
                             </li>
 
                             <li class="flex">
-                                <label for="filtra-data">Filtra per data</label>
-                                <input type="date" name="filtra-data" id="">
+                                <label for="filtra-data">Data</label>
+                                <input type="date" name="filtra-data" id="date-filter">
                             </li>
 
                         </ul>
@@ -680,7 +687,7 @@
                         <input type="submit" value="Invia" id="filter-list__filter-btn">
 
                     </form>
-                    
+
                 </div>
                 
             </section>
